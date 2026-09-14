@@ -38,6 +38,34 @@ The refined Decision Tree model achieved:
 
 The classification threshold was adjusted to **0.31** using training-set out-of-fold predictions. This improved recall for rainy days, allowing the model to identify a larger proportion of actual rainfall events, with a trade-off in precision.
 
+## 📈 Results & Visualisations
+
+### Confusion Matrix
+
+<p align="center">
+  <img src="confusion_matrix.png" width="600">
+</p>
+
+The tuned Decision Tree correctly identified **343 of 471 rainy days**, corresponding to a recall of approximately **72.8%**. The model missed 128 rainy days and produced 194 false-positive rainfall predictions.
+
+### ROC Curve
+
+<p align="center">
+  <img src="roc_curve.png" width="500">
+</p>
+
+The tuned Decision Tree achieved a ROC-AUC of **0.735**, indicating a moderate ability to distinguish between rainy and non-rainy days.
+
+### Feature Importance
+
+<p align="center">
+  <img src="feature_importance.png" width="700">
+</p>
+
+The model relied most heavily on **rainfall since 9 am**, followed by **mean sea level pressure (MSLP)**, wind direction, and temperature-related variables.
+
+Feature importance indicates which variables were most influential in the Decision Tree's predictions and should not be interpreted as evidence of causal relationships.
+
 ## 🛠️ Technologies
 
 - **Python**
